@@ -1,0 +1,30 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"],
+      "cache": true
+    },
+    "test": {
+      "dependsOn": ["build"],
+      "inputs": ["src/**", "test/**"],
+      "outputs": [],
+      "cache": true
+    },
+    "lint": {
+      "outputs": [],
+      "cache": true
+    },
+    "dev": {
+      "cache": false
+    }
+  },
+  "globalDependencies": [
+    "tsconfig.json",
+    "jest.config.js"
+  ],
+  "remoteCache": {
+    "signature": true
+  }
+}

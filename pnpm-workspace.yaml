@@ -1,0 +1,4 @@
+packages:
+  - "apps/*"       # app应用
+  - "packages/*"   # 共享库/工具/组件/配置/主题等等
+  - "configs/*"    # 配置文件（ESLint、TSConfig 等）
